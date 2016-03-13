@@ -1,0 +1,837 @@
+/* General formatting */
+.hs-wrapper {
+	background-color:#eee;
+}
+.hs-text {
+	font-family:"Courier New",monospace;
+	font-weight:bold;
+	font-size:0.875em;
+	color:black;
+}
+.hs-pesterlog {
+	padding:1.125em  2.125em;
+	border:0.0675em dashed gray;
+	display:inline-block;
+	width:37.923em;
+	text-align:left;
+}
+.hs-pesterlog-parent {
+	/* Wrapper div around pesterlog container */
+	text-align:center;
+}
+.hs-line, .hs-children-lines > * {
+	display:block;
+	margin-top:0;
+	margin-bottom:0;
+}
+.hs-pesterlog-action {
+	color:black;
+}
+.hs-pesterlog-action::before {
+	content:"-- ";
+}
+.hs-pesterlog-action::after {
+	content:" --";
+}
+.hs-clear-below {
+	margin-bottom:1em;
+}
+.hs-clear-above {
+	margin-top:1em;
+}
+
+/* Character-associated colours */
+.hs-john, .hs-john-auto, .hs-tavrisprite, .hs-tavrisprite-auto {
+	color:#0715cd;
+}
+.hs-john-bg, .hs-john-bg-auto, .hs-tavrisprite-bg, .hs-tavrisprite-bg-auto {
+	background-color:#0715cd;
+}
+.hs-john-bg-border, .hs-john-bg-border-auto, .hs-tavrisprite-bg-border, .hs-tavrisprite-bg-border-auto {
+	border-color:#0715cd;
+}
+.hs-rose, .hs-rose-auto, .hs-fefetasprite, .hs-fefetasprite-auto, .hs-rosesprite, .hs-rosesprite-auto {
+	color:#b536da;
+}
+.hs-rose-bg, .hs-rose-bg-auto, .hs-fefetasprite-bg, .hs-fefetasprite-bg-auto, .hs-rosesprite-bg, .hs-rosesprite-bg-auto {
+	background-color:#b536da;
+}
+.hs-rose-bg-border, .hs-rose-bg-border-auto, .hs-fefetasprite-bg-border, .hs-fefetasprite-bg-border-auto, .hs-rosesprite-bg-border, .hs-rosesprite-bg-border-auto {
+	border-color:#b536da;
+}
+.hs-dave, .hs-dave-auto, .hs-equiusprite, .hs-equiusprite-auto, .hs-arquiusprite, .hs-arquiusprite-auto, .hs-ar, .hs-ar-auto {
+	color:#e00707;
+}
+.hs-dave-bg, .hs-dave-bg-auto, .hs-equiusprite-bg, .hs-equiusprite-bg-auto, .hs-arquiusprite-bg, .hs-arquiusprite-bg-auto, .hs-ar-bg, .hs-ar-bg-auto {
+	background-color:#e00707;
+}
+.hs-dave-bg-border, .hs-dave-bg-border-auto, .hs-equiusprite-bg-border, .hs-equiusprite-bg-border-auto, .hs-arquiusprite-bg-border, .hs-arquiusprite-bg-border-auto, .hs-ar-bg-border, .hs-ar-bg-border-auto {
+	border-color:#e00707;
+}
+.hs-jade, .hs-jade-auto, .hs-erisolsprite, .hs-erisolsprite-auto {
+	color:#4ac925;
+}
+.hs-jade-bg, .hs-jade-bg-auto, .hs-erisolsprite-bg, .hs-erisolsprite-bg-auto {
+	background-color:#4ac925;
+}
+.hs-jade-bg-border, .hs-jade-bg-border-auto, .hs-erisolsprite-bg-border, .hs-erisolsprite-bg-border-auto {
+	border-color:#4ac925;
+}
+.hs-jane, .hs-jane-auto, .hs-harlequinsprite, .hs-harlequinsprite-auto, .hs-nannasprite, .hs-nannasprite-auto {
+	color:#00d5f2;
+}
+.hs-jane-bg, .hs-jane-bg-auto, .hs-harlequinsprite-bg, .hs-harlequinsprite-bg-auto, .hs-nannasprite-bg, .hs-nannasprite-bg-auto {
+	background-color:#00d5f2;
+}
+.hs-jane-bg-border, .hs-jane-bg-border-auto, .hs-harlequinsprite-bg-border, .hs-harlequinsprite-bg-border-auto, .hs-nannasprite-bg-border, .hs-nannasprite-bg-border-auto {
+	border-color:#00d5f2;
+}
+.hs-roxy, .hs-roxy-auto, .hs-jaspersprite, .hs-jaspersprite-auto {
+	color:#f141ef;
+}
+.hs-roxy-bg, .hs-roxy-bg-auto, .hs-jaspersprite-bg, .hs-jaspersprite-bg-auto {
+	background-color:#f141ef;
+}
+.hs-roxy-bg-border, .hs-roxy-bg-border-auto, .hs-jaspersprite-bg-border, .hs-jaspersprite-bg-border-auto {
+	border-color:#f141ef;
+}
+.hs-dirk, .hs-dirk-auto, .hs-calsprite, .hs-calsprite-auto, .hs-davesprite, .hs-davesprite-auto {
+	color:#f2a400;
+}
+.hs-dirk-bg, .hs-dirk-bg-auto, .hs-calsprite-bg, .hs-calsprite-bg-auto, .hs-davesprite-bg, .hs-davesprite-bg-auto {
+	background-color:#f2a400;
+}
+.hs-dirk-bg-border, .hs-dirk-bg-border-auto, .hs-calsprite-bg-border, .hs-calsprite-bg-border-auto, .hs-davesprite-bg-border, .hs-davesprite-bg-border-auto {
+	border-color:#f2a400;
+}
+.hs-jake, .hs-jake-auto, .hs-becsprite, .hs-becsprite-auto, .hs-jadesprite, .hs-jadesprite-auto {
+	color:#1f9400;
+}
+.hs-jake-bg, .hs-jake-bg-auto, .hs-becsprite-bg, .hs-becsprite-bg-auto, .hs-jadesprite-bg, .hs-jadesprite-bg-auto {
+	background-color:#1f9400;
+}
+.hs-jake-bg-border, .hs-jake-bg-border-auto, .hs-becsprite-bg-border, .hs-becsprite-bg-border-auto, .hs-jadesprite-bg-border, .hs-jadesprite-bg-border-auto {
+	border-color:#1f9400;
+}
+.hs-aradia, .hs-aradia-auto, .hs-aradia-blood, .hs-aradia-blood-auto, .hs-damara, .hs-damara-auto, .hs-damara-blood, .hs-damara-blood-auto {
+	color:#a10000;
+}
+.hs-aradia-bg, .hs-aradia-bg-auto, .hs-aradia-blood-bg, .hs-aradia-blood-bg-auto, .hs-damara-bg, .hs-damara-bg-auto, .hs-damara-blood-bg, .hs-damara-blood-bg-auto {
+	background-color:#a10000;
+}
+.hs-aradia-bg-border, .hs-aradia-bg-border-auto, .hs-aradia-blood-bg-border, .hs-aradia-blood-bg-border-auto, .hs-damara-bg-border, .hs-damara-bg-border-auto, .hs-damara-blood-bg-border, .hs-damara-blood-bg-border-auto {
+	border-color:#a10000;
+}
+.hs-tavros, .hs-tavros-auto, .hs-rufioh, .hs-rufioh-auto {
+	color:#a15000;
+}
+.hs-tavros-bg, .hs-tavros-bg-auto, .hs-rufioh-bg, .hs-rufioh-bg-auto {
+	background-color:#a15000;
+}
+.hs-tavros-bg-border, .hs-tavros-bg-border-auto, .hs-rufioh-bg-border, .hs-rufioh-bg-border-auto {
+	border-color:#a15000;
+}
+.hs-sollux, .hs-sollux-auto, .hs-sollux-blood, .hs-sollux-blood-auto, .hs-mituna, .hs-mituna-auto, .hs-mituna-blood, .hs-mituna-blood-auto {
+	color:#a1a100;
+}
+.hs-sollux-bg, .hs-sollux-bg-auto, .hs-sollux-blood-bg, .hs-sollux-blood-bg-auto, .hs-mituna-bg, .hs-mituna-bg-auto, .hs-mituna-blood-bg, .hs-mituna-blood-bg-auto {
+	background-color:#a1a100;
+}
+.hs-sollux-bg-border, .hs-sollux-bg-border-auto, .hs-sollux-blood-bg-border, .hs-sollux-blood-bg-border-auto, .hs-mituna-bg-border, .hs-mituna-bg-border-auto, .hs-mituna-blood-bg-border, .hs-mituna-blood-bg-border-auto {
+	border-color:#a1a100;
+}
+.hs-karkat, .hs-karkat-auto {
+	color:#626262;
+}
+.hs-karkat-bg, .hs-karkat-bg-auto {
+	background-color:#626262;
+}
+.hs-karkat-bg-border, .hs-karkat-bg-border-auto {
+	border-color:#626262;
+}
+.hs-karkat-alt, .hs-karkat-alt-auto, .hs-karkat-blood, .hs-karkat-blood-auto, .hs-caliborn-blood, .hs-caliborn-blood-auto, .hs-human-blood, .hs-human-blood-auto, .hs-kankri, .hs-kankri-auto, .hs-kankri-blood, .hs-kankri-blood-auto {
+	color:#f00;
+}
+.hs-karkat-alt-bg, .hs-karkat-alt-bg-auto, .hs-karkat-blood-bg, .hs-karkat-blood-bg-auto, .hs-caliborn-blood-bg, .hs-caliborn-blood-bg-auto, .hs-human-blood-bg, .hs-human-blood-bg-auto, .hs-kankri-bg, .hs-kankri-bg-auto, .hs-kankri-blood-bg, .hs-kankri-blood-bg-auto {
+	background-color:#f00;
+}
+.hs-karkat-alt-bg-border, .hs-karkat-alt-bg-border-auto, .hs-karkat-blood-bg-border, .hs-karkat-blood-bg-border-auto, .hs-caliborn-blood-bg-border, .hs-caliborn-blood-bg-border-auto, .hs-human-blood-bg-border, .hs-human-blood-bg-border-auto, .hs-kankri-bg-border, .hs-kankri-bg-border-auto, .hs-kankri-blood-bg-border, .hs-kankri-blood-bg-border-auto {
+	border-color:#f00;
+}
+.hs-nepeta, .hs-nepeta-auto, .hs-meulin, .hs-meulin-auto {
+	color:#416600;
+}
+.hs-nepeta-bg, .hs-nepeta-bg-auto, .hs-meulin-bg, .hs-meulin-bg-auto {
+	background-color:#416600;
+}
+.hs-nepeta-bg-border, .hs-nepeta-bg-border-auto, .hs-meulin-bg-border, .hs-meulin-bg-border-auto {
+	border-color:#416600;
+}
+.hs-kanaya, .hs-kanaya-auto, .hs-porrim, .hs-porrim-auto {
+	color:#008141;
+}
+.hs-kanaya-bg, .hs-kanaya-bg-auto, .hs-porrim-bg, .hs-porrim-bg-auto {
+	background-color:#008141;
+}
+.hs-kanaya-bg-border, .hs-kanaya-bg-border-auto, .hs-porrim-bg-border, .hs-porrim-bg-border-auto {
+	border-color:#008141;
+}
+.hs-terezi, .hs-terezi-auto, .hs-terezi-blood, .hs-terezi-blood-auto, .hs-latula, .hs-latula-auto, .hs-latula-blood, .hs-latula-blood-auto {
+	color:#008282;
+}
+.hs-terezi-bg, .hs-terezi-bg-auto, .hs-terezi-blood-bg, .hs-terezi-blood-bg-auto, .hs-latula-bg, .hs-latula-bg-auto, .hs-latula-blood-bg, .hs-latula-blood-bg-auto {
+	background-color:#008282;
+}
+.hs-terezi-bg-border, .hs-terezi-bg-border-auto, .hs-terezi-blood-bg-border, .hs-terezi-blood-bg-border-auto, .hs-latula-bg-border, .hs-latula-bg-border-auto, .hs-latula-blood-bg-border, .hs-latula-blood-bg-border-auto {
+	border-color:#008282;
+}
+.hs-vriska, .hs-vriska-auto, .hs-aranea, .hs-aranea-auto {
+	color:#005682;
+}
+.hs-vriska-bg, .hs-vriska-bg-auto, .hs-aranea-bg, .hs-aranea-bg-auto {
+	background-color:#005682;
+}
+.hs-vriska-bg-border, .hs-vriska-bg-border-auto, .hs-aranea-bg-border, .hs-aranea-bg-border-auto {
+	border-color:#005682;
+}
+.hs-equius, .hs-equius-auto, .hs-horuss, .hs-horuss-auto {
+	color:#000056;
+}
+.hs-equius-bg, .hs-equius-bg-auto, .hs-horuss-bg, .hs-horuss-bg-auto {
+	background-color:#000056;
+}
+.hs-equius-bg-border, .hs-equius-bg-border-auto, .hs-horuss-bg-border, .hs-horuss-bg-border-auto {
+	border-color:#000056;
+}
+.hs-gamzee, .hs-gamzee-auto, .hs-kurloz, .hs-kurloz-auto {
+	color:#2b0057;
+}
+.hs-gamzee-bg, .hs-gamzee-bg-auto, .hs-kurloz-bg, .hs-kurloz-bg-auto {
+	background-color:#2b0057;
+}
+.hs-gamzee-bg-border, .hs-gamzee-bg-border-auto, .hs-kurloz-bg-border, .hs-kurloz-bg-border-auto {
+	border-color:#2b0057;
+}
+.hs-eridan, .hs-eridan-auto, .hs-eridan-blood, .hs-eridan-blood-auto, .hs-cronus, .hs-cronus-auto, .hs-cronus-blood, .hs-cronus-blood-auto {
+	color:#6a006a;
+}
+.hs-eridan-bg, .hs-eridan-bg-auto, .hs-eridan-blood-bg, .hs-eridan-blood-bg-auto, .hs-cronus-bg, .hs-cronus-bg-auto, .hs-cronus-blood-bg, .hs-cronus-blood-bg-auto {
+	background-color:#6a006a;
+}
+.hs-eridan-bg-border, .hs-eridan-bg-border-auto, .hs-eridan-blood-bg-border, .hs-eridan-blood-bg-border-auto, .hs-cronus-bg-border, .hs-cronus-bg-border-auto, .hs-cronus-blood-bg-border, .hs-cronus-blood-bg-border-auto {
+	border-color:#6a006a;
+}
+.hs-feferi, .hs-feferi-auto, .hs-meenah, .hs-meenah-auto, .hs-condesce, .hs-condesce-auto, .hs-condescension, .hs-condescension-auto {
+	color:#77003c;
+}
+.hs-feferi-bg, .hs-feferi-bg-auto, .hs-meenah-bg, .hs-meenah-bg-auto, .hs-condesce-bg, .hs-condesce-bg-auto, .hs-condescension-bg, .hs-condescension-bg-auto {
+	background-color:#77003c;
+}
+.hs-feferi-bg-border, .hs-feferi-bg-border-auto, .hs-meenah-bg-border, .hs-meenah-bg-border-auto, .hs-condesce-bg-border, .hs-condesce-bg-border-auto, .hs-condescension-bg-border, .hs-condescension-bg-border-auto {
+	border-color:#77003c;
+}
+.hs-tavros-blood, .hs-tavros-blood-auto, .hs-rufioh-blood, .hs-rufioh-blood-auto {
+	color:#a25203;
+}
+.hs-tavros-blood-bg, .hs-tavros-blood-bg-auto, .hs-rufioh-blood-bg, .hs-rufioh-blood-bg-auto {
+	background-color:#a25203;
+}
+.hs-tavros-blood-bg-border, .hs-tavros-blood-bg-border-auto, .hs-rufioh-blood-bg-border, .hs-rufioh-blood-bg-border-auto {
+	border-color:#a25203;
+}
+.hs-karkat-blood-b2, .hs-karkat-blood-b2-auto {
+	color:#f20000;
+}
+.hs-karkat-blood-b2-bg, .hs-karkat-blood-b2-bg-auto {
+	background-color:#f20000;
+}
+.hs-karkat-blood-b2-bg-border, .hs-karkat-blood-b2-bg-border-auto {
+	border-color:#f20000;
+}
+.hs-lime-blood, .hs-lime-blood-auto {
+	color:#658200;
+}
+.hs-lime-blood-bg, .hs-lime-blood-bg-auto {
+	background-color:#658200;
+}
+.hs-lime-blood-bg-border, .hs-lime-blood-bg-border-auto {
+	border-color:#658200;
+}
+.hs-nepeta-blood, .hs-nepeta-blood-auto, .hs-meulin-blood, .hs-meulin-blood-auto {
+	color:#2e4800;
+}
+.hs-nepeta-blood-bg, .hs-nepeta-blood-bg-auto, .hs-meulin-blood-bg, .hs-meulin-blood-bg-auto {
+	background-color:#2e4800;
+}
+.hs-nepeta-blood-bg-border, .hs-nepeta-blood-bg-border-auto, .hs-meulin-blood-bg-border, .hs-meulin-blood-bg-border-auto {
+	border-color:#2e4800;
+}
+.hs-kanaya-blood, .hs-kanaya-blood-auto, .hs-porrim-blood, .hs-porrim-blood-auto {
+	color:#078446;
+}
+.hs-kanaya-blood-bg, .hs-kanaya-blood-bg-auto, .hs-porrim-blood-bg, .hs-porrim-blood-bg-auto {
+	background-color:#078446;
+}
+.hs-kanaya-blood-bg-border, .hs-kanaya-blood-bg-border-auto, .hs-porrim-blood-bg-border, .hs-porrim-blood-bg-border-auto {
+	border-color:#078446;
+}
+.hs-vriska-blood, .hs-vriska-blood-auto, .hs-aranea-blood, .hs-aranea-blood-auto {
+	color:#004182;
+}
+.hs-vriska-blood-bg, .hs-vriska-blood-bg-auto, .hs-aranea-blood-bg, .hs-aranea-blood-bg-auto {
+	background-color:#004182;
+}
+.hs-vriska-blood-bg-border, .hs-vriska-blood-bg-border-auto, .hs-aranea-blood-bg-border, .hs-aranea-blood-bg-border-auto {
+	border-color:#004182;
+}
+.hs-equius-blood, .hs-equius-blood-auto, .hs-horuss-blood, .hs-horuss-blood-auto {
+	color:#0021cb;
+}
+.hs-equius-blood-bg, .hs-equius-blood-bg-auto, .hs-horuss-blood-bg, .hs-horuss-blood-bg-auto {
+	background-color:#0021cb;
+}
+.hs-equius-blood-bg-border, .hs-equius-blood-bg-border-auto, .hs-horuss-blood-bg-border, .hs-horuss-blood-bg-border-auto {
+	border-color:#0021cb;
+}
+.hs-gamzee-blood, .hs-gamzee-blood-auto, .hs-kurloz-blood, .hs-kurloz-blood-auto {
+	color:#440a7f;
+}
+.hs-gamzee-blood-bg, .hs-gamzee-blood-bg-auto, .hs-kurloz-blood-bg, .hs-kurloz-blood-bg-auto {
+	background-color:#440a7f;
+}
+.hs-gamzee-blood-bg-border, .hs-gamzee-blood-bg-border-auto, .hs-kurloz-blood-bg-border, .hs-kurloz-blood-bg-border-auto {
+	border-color:#440a7f;
+}
+.hs-feferi-blood, .hs-feferi-blood-auto, .hs-meenah-blood, .hs-meenah-blood-auto, .hs-condesce-blood, .hs-condesce-blood-auto, .hs-condescension-blood, .hs-condescension-blood-auto {
+	color:#99004d;
+}
+.hs-feferi-blood-bg, .hs-feferi-blood-bg-auto, .hs-meenah-blood-bg, .hs-meenah-blood-bg-auto, .hs-condesce-blood-bg, .hs-condesce-blood-bg-auto, .hs-condescension-blood-bg, .hs-condescension-blood-bg-auto {
+	background-color:#99004d;
+}
+.hs-feferi-blood-bg-border, .hs-feferi-blood-bg-border-auto, .hs-meenah-blood-bg-border, .hs-meenah-blood-bg-border-auto, .hs-condesce-blood-bg-border, .hs-condesce-blood-bg-border-auto, .hs-condescension-blood-bg-border, .hs-condescension-blood-bg-border-auto {
+	border-color:#99004d;
+}
+.hs-calliope, .hs-calliope-auto {
+	color:#929292;
+}
+.hs-calliope-bg, .hs-calliope-bg-auto {
+	background-color:#929292;
+}
+.hs-calliope-bg-border, .hs-calliope-bg-border-auto {
+	border-color:#929292;
+}
+.hs-caliborn, .hs-caliborn-auto {
+	color:#323232;
+}
+.hs-caliborn-bg, .hs-caliborn-bg-auto {
+	background-color:#323232;
+}
+.hs-caliborn-bg-border, .hs-caliborn-bg-border-auto {
+	border-color:#323232;
+}
+.hs-caliborn-alt, .hs-caliborn-alt-auto, .hs-calliope-blood, .hs-calliope-blood-auto {
+	color:#2ed73a;
+}
+.hs-caliborn-alt-bg, .hs-caliborn-alt-bg-auto, .hs-calliope-blood-bg, .hs-calliope-blood-bg-auto {
+	background-color:#2ed73a;
+}
+.hs-caliborn-alt-bg-border, .hs-caliborn-alt-bg-border-auto, .hs-calliope-blood-bg-border, .hs-calliope-blood-bg-border-auto {
+	border-color:#2ed73a;
+}
+.hs-scratch, .hs-scratch-auto {
+	color:white;
+}
+.hs-scratch-bg, .hs-scratch-bg-auto {
+	background-color:white;
+}
+.hs-scratch-bg-border, .hs-scratch-bg-border-auto {
+	border-color:white;
+}
+.hs-dad, .hs-dad-auto {
+	color:#4b4b4b;
+}
+.hs-dad-bg, .hs-dad-bg-auto {
+	background-color:#4b4b4b;
+}
+.hs-dad-bg-border, .hs-dad-bg-border-auto {
+	border-color:#4b4b4b;
+}
+.hs-serenity, .hs-serenity-auto {
+	color:#fff300;
+}
+.hs-serenity-bg, .hs-serenity-bg-auto {
+	background-color:#fff300;
+}
+.hs-serenity-bg-border, .hs-serenity-bg-border-auto {
+	border-color:#fff300;
+}
+.hs-prospit, .hs-prospit-auto {
+	color:#ffbe00;
+}
+.hs-prospit-bg, .hs-prospit-bg-auto {
+	background-color:#ffbe00;
+}
+.hs-prospit-bg-border, .hs-prospit-bg-border-auto {
+	border-color:#ffbe00;
+}
+.hs-prospit-inerior, .hs-prospit-inerior-auto {
+	color:#f26300;
+}
+.hs-prospit-inerior-bg, .hs-prospit-inerior-bg-auto {
+	background-color:#f26300;
+}
+.hs-prospit-inerior-bg-border, .hs-prospit-inerior-bg-border-auto {
+	border-color:#f26300;
+}
+.hs-derse, .hs-derse-auto {
+	color:#9a2cb6;
+}
+.hs-derse-bg, .hs-derse-bg-auto {
+	background-color:#9a2cb6;
+}
+.hs-derse-bg-border, .hs-derse-bg-border-auto {
+	border-color:#9a2cb6;
+}
+.hs-derse-interior, .hs-derse-interior-auto {
+	color:#2500f7;
+}
+.hs-derse-interior-bg, .hs-derse-interior-bg-auto {
+	background-color:#2500f7;
+}
+.hs-derse-interior-bg-border, .hs-derse-interior-bg-border-auto {
+	border-color:#2500f7;
+}
+.hs-mercury, .hs-mercury-auto {
+	color:#6a6a6a;
+}
+.hs-mercury-bg, .hs-mercury-bg-auto {
+	background-color:#6a6a6a;
+}
+.hs-mercury-bg-border, .hs-mercury-bg-border-auto {
+	border-color:#6a6a6a;
+}
+.hs-cobalt, .hs-cobalt-auto {
+	color:#0033d8;
+}
+.hs-cobalt-bg, .hs-cobalt-bg-auto {
+	background-color:#0033d8;
+}
+.hs-cobalt-bg-border, .hs-cobalt-bg-border-auto {
+	border-color:#0033d8;
+}
+.hs-chalk, .hs-chalk-auto {
+	color:#e7e7e7;
+}
+.hs-chalk-bg, .hs-chalk-bg-auto {
+	background-color:#e7e7e7;
+}
+.hs-chalk-bg-border, .hs-chalk-bg-border-auto {
+	border-color:#e7e7e7;
+}
+.hs-marble, .hs-marble-auto {
+	color:#fe6fef;
+}
+.hs-marble-bg, .hs-marble-bg-auto {
+	background-color:#fe6fef;
+}
+.hs-marble-bg-border, .hs-marble-bg-border-auto {
+	border-color:#fe6fef;
+}
+.hs-rust, .hs-rust-auto {
+	color:#691a14;
+}
+.hs-rust-bg, .hs-rust-bg-auto {
+	background-color:#691a14;
+}
+.hs-rust-bg-border, .hs-rust-bg-border-auto {
+	border-color:#691a14;
+}
+.hs-amber, .hs-amber-auto {
+	color:#ffde00;
+}
+.hs-amber-bg, .hs-amber-bg-auto {
+	background-color:#ffde00;
+}
+.hs-amber-bg-border, .hs-amber-bg-border-auto {
+	border-color:#ffde00;
+}
+.hs-uranium, .hs-uranium-auto {
+	color:#186800;
+}
+.hs-uranium-bg, .hs-uranium-bg-auto {
+	background-color:#186800;
+}
+.hs-uranium-bg-border, .hs-uranium-bg-border-auto {
+	border-color:#186800;
+}
+.hs-itchy, .hs-itchy-auto, .hs-stitch, .hs-stitch-auto {
+	color:#ffea00;
+}
+.hs-itchy-bg, .hs-itchy-bg-auto, .hs-stitch-bg, .hs-stitch-bg-auto {
+	background-color:#ffea00;
+}
+.hs-itchy-bg-border, .hs-itchy-bg-border-auto, .hs-stitch-bg-border, .hs-stitch-bg-border-auto {
+	border-color:#ffea00;
+}
+.hs-doze, .hs-doze-auto {
+	color:#4040fd;
+}
+.hs-doze-bg, .hs-doze-bg-auto {
+	background-color:#4040fd;
+}
+.hs-doze-bg-border, .hs-doze-bg-border-auto {
+	border-color:#4040fd;
+}
+.hs-trace, .hs-trace-auto, .hs-matchsticks, .hs-matchsticks-auto {
+	color:#df0000;
+}
+.hs-trace-bg, .hs-trace-bg-auto, .hs-matchsticks-bg, .hs-matchsticks-bg-auto {
+	background-color:#df0000;
+}
+.hs-trace-bg-border, .hs-trace-bg-border-auto, .hs-matchsticks-bg-border, .hs-matchsticks-bg-border-auto {
+	border-color:#df0000;
+}
+.hs-clover, .hs-clover-auto, .hs-eggs, .hs-eggs-auto {
+	color:#a357ff;
+}
+.hs-clover-bg, .hs-clover-bg-auto, .hs-eggs-bg, .hs-eggs-bg-auto {
+	background-color:#a357ff;
+}
+.hs-clover-bg-border, .hs-clover-bg-border-auto, .hs-eggs-bg-border, .hs-eggs-bg-border-auto {
+	border-color:#a357ff;
+}
+.hs-fin, .hs-fin-auto {
+	color:#ff6204;
+}
+.hs-fin-bg, .hs-fin-bg-auto {
+	background-color:#ff6204;
+}
+.hs-fin-bg-border, .hs-fin-bg-border-auto {
+	border-color:#ff6204;
+}
+.hs-die, .hs-die-auto, .hs-quarters, .hs-quarters-auto {
+	color:#008140;
+}
+.hs-die-bg, .hs-die-bg-auto, .hs-quarters-bg, .hs-quarters-bg-auto {
+	background-color:#008140;
+}
+.hs-die-bg-border, .hs-die-bg-border-auto, .hs-quarters-bg-border, .hs-quarters-bg-border-auto {
+	border-color:#008140;
+}
+.hs-crowbar, .hs-crowbar-auto {
+	color:#950014;
+}
+.hs-crowbar-bg, .hs-crowbar-bg-auto {
+	background-color:#950014;
+}
+.hs-crowbar-bg-border, .hs-crowbar-bg-border-auto {
+	border-color:#950014;
+}
+.hs-sawbuck, .hs-sawbuck-auto {
+	color:#3e40f9;
+}
+.hs-sawbuck-bg, .hs-sawbuck-bg-auto {
+	background-color:#3e40f9;
+}
+.hs-sawbuck-bg-border, .hs-sawbuck-bg-border-auto {
+	border-color:#3e40f9;
+}
+.hs-biscuits, .hs-biscuits-auto {
+	color:#ff6000;
+}
+.hs-biscuits-bg, .hs-biscuits-bg-auto {
+	background-color:#ff6000;
+}
+.hs-biscuits-bg-border, .hs-biscuits-bg-border-auto {
+	border-color:#ff6000;
+}
+.hs-cans, .hs-cans-auto {
+	color:#940015;
+}
+.hs-cans-bg, .hs-cans-bg-auto {
+	background-color:#940015;
+}
+.hs-cans-bg-border, .hs-cans-bg-border-auto {
+	border-color:#940015;
+}
+
+/* Character pesterlog auto-fills */.hs-children-lines > .hs-john-auto::before {
+	content:"EB: ";
+}
+.hs-pesterlog-action  > .hs-john-auto::before {
+	content:"ectoBiologist";
+	color:black;
+}
+.hs-pesterlog-action  > .hs-john-auto::after {
+	content:" [EB]";
+}
+.hs-children-lines > .hs-john-old-auto::before {
+	content:"GT: ";
+}
+.hs-pesterlog-action  > .hs-john-old-auto::before {
+	content:"ghostlyTrickster";
+	color:black;
+}
+.hs-pesterlog-action  > .hs-john-old-auto::after {
+	content:" [GT]";
+}
+.hs-children-lines > .hs-rose-auto::before {
+	content:"TT: ";
+}
+.hs-pesterlog-action  > .hs-rose-auto::before {
+	content:"tentacleTherapist";
+	color:black;
+}
+.hs-pesterlog-action  > .hs-rose-auto::after {
+	content:" [TT]";
+}
+.hs-children-lines > .hs-dave-auto::before {
+	content:"TG: ";
+}
+.hs-pesterlog-action  > .hs-dave-auto::before {
+	content:"turntechGodhead";
+	color:black;
+}
+.hs-pesterlog-action  > .hs-dave-auto::after {
+	content:" [TG]";
+}
+.hs-children-lines > .hs-ar-auto::before {
+	content:"AR: ";
+}
+.hs-pesterlog-action  > .hs-ar-auto::before {
+	content:"autoResponder";
+	color:black;
+}
+.hs-pesterlog-action  > .hs-ar-auto::after {
+	content:" [AR]";
+}
+.hs-children-lines > .hs-jade-auto::before {
+	content:"GG: ";
+}
+.hs-pesterlog-action  > .hs-jade-auto::before {
+	content:"gardenGnostic";
+	color:black;
+}
+.hs-pesterlog-action  > .hs-jade-auto::after {
+	content:" [GG]";
+}
+.hs-children-lines > .hs-jane-auto::before {
+	content:"GG: ";
+}
+.hs-pesterlog-action  > .hs-jane-auto::before {
+	content:"gutsyGumshoe";
+	color:black;
+}
+.hs-pesterlog-action  > .hs-jane-auto::after {
+	content:" [GG]";
+}
+.hs-children-lines > .hs-roxy-auto::before {
+	content:"TG: ";
+}
+.hs-pesterlog-action  > .hs-roxy-auto::before {
+	content:"tipsyGnostalgic";
+	color:black;
+}
+.hs-pesterlog-action  > .hs-roxy-auto::after {
+	content:" [TG]";
+}
+.hs-children-lines > .hs-dirk-auto::before {
+	content:"TT: ";
+}
+.hs-pesterlog-action  > .hs-dirk-auto::before {
+	content:"timaeusTestified";
+	color:black;
+}
+.hs-pesterlog-action  > .hs-dirk-auto::after {
+	content:" [TT]";
+}
+.hs-children-lines > .hs-jake-auto::before {
+	content:"GT: ";
+}
+.hs-pesterlog-action  > .hs-jake-auto::before {
+	content:"golgothosTerror";
+	color:black;
+}
+.hs-pesterlog-action  > .hs-jake-auto::after {
+	content:" [GT]";
+}
+.hs-children-lines > .hs-aradia-auto::before {
+	content:"AA: ";
+}
+.hs-pesterlog-action  > .hs-aradia-auto::before {
+	content:"apocalypseArisen";
+	color:black;
+}
+.hs-pesterlog-action  > .hs-aradia-auto::after {
+	content:" [AA]";
+}
+.hs-children-lines > .hs-tavros-auto::before {
+	content:"AT: ";
+}
+.hs-pesterlog-action  > .hs-tavros-auto::before {
+	content:"adiosToreador";
+	color:black;
+}
+.hs-pesterlog-action  > .hs-tavros-auto::after {
+	content:" [AT]";
+}
+.hs-children-lines > .hs-sollux-auto::before {
+	content:"TA: ";
+}
+.hs-pesterlog-action  > .hs-sollux-auto::before {
+	content:"twinArmageddons";
+	color:black;
+}
+.hs-pesterlog-action  > .hs-sollux-auto::after {
+	content:" [TA]";
+}
+.hs-children-lines > .hs-karkat-auto::before {
+	content:"CG: ";
+}
+.hs-pesterlog-action  > .hs-karkat-auto::before {
+	content:"carcinoGeneticist";
+	color:black;
+}
+.hs-pesterlog-action  > .hs-karkat-auto::after {
+	content:" [CG]";
+}
+.hs-children-lines > .hs-karkat-alt-auto::before {
+	content:"CG: ";
+}
+.hs-pesterlog-action  > .hs-karkat-alt-auto::before {
+	content:"carcinoGeneticist";
+	color:black;
+}
+.hs-pesterlog-action  > .hs-karkat-alt-auto::after {
+	content:" [CG]";
+}
+.hs-children-lines > .hs-nepeta-auto::before {
+	content:"AC: ";
+}
+.hs-pesterlog-action  > .hs-nepeta-auto::before {
+	content:"arsenicCatnip";
+	color:black;
+}
+.hs-pesterlog-action  > .hs-nepeta-auto::after {
+	content:" [AC]";
+}
+.hs-children-lines > .hs-kanaya-auto::before {
+	content:"GA: ";
+}
+.hs-pesterlog-action  > .hs-kanaya-auto::before {
+	content:"grimAuxiliatrix";
+	color:black;
+}
+.hs-pesterlog-action  > .hs-kanaya-auto::after {
+	content:" [GA]";
+}
+.hs-children-lines > .hs-terezi-auto::before {
+	content:"GC: ";
+}
+.hs-pesterlog-action  > .hs-terezi-auto::before {
+	content:"gallowsCalibrator";
+	color:black;
+}
+.hs-pesterlog-action  > .hs-terezi-auto::after {
+	content:" [GC]";
+}
+.hs-children-lines > .hs-vriska-auto::before {
+	content:"AG: ";
+}
+.hs-pesterlog-action  > .hs-vriska-auto::before {
+	content:"arachnidsGrip";
+	color:black;
+}
+.hs-pesterlog-action  > .hs-vriska-auto::after {
+	content:" [AG]";
+}
+.hs-children-lines > .hs-gamzee-auto::before {
+	content:"TC: ";
+}
+.hs-pesterlog-action  > .hs-gamzee-auto::before {
+	content:"terminallyCapricious";
+	color:black;
+}
+.hs-pesterlog-action  > .hs-gamzee-auto::after {
+	content:" [TC]";
+}
+.hs-children-lines > .hs-eridan-auto::before {
+	content:"CA: ";
+}
+.hs-pesterlog-action  > .hs-eridan-auto::before {
+	content:"caligulasAquarium";
+	color:black;
+}
+.hs-pesterlog-action  > .hs-eridan-auto::after {
+	content:" [CA]";
+}
+.hs-children-lines > .hs-feferi-auto::before {
+	content:"CC: ";
+}
+.hs-pesterlog-action  > .hs-feferi-auto::before {
+	content:"cuttlefishCuller";
+	color:black;
+}
+.hs-pesterlog-action  > .hs-feferi-auto::after {
+	content:" [CC]";
+}
+.hs-children-lines > .hs-condesce-auto::before {
+	content:")(IC: ";
+}
+.hs-pesterlog-action  > .hs-condesce-auto::before {
+	content:")(er Imperious Condescension";
+	color:black;
+}
+.hs-pesterlog-action  > .hs-condesce-auto::after {
+	content:" [)(IC]";
+}
+.hs-children-lines > .hs-condescension-auto::before {
+	content:")(IC: ";
+}
+.hs-pesterlog-action  > .hs-condescension-auto::before {
+	content:")(er Imperious Condescension";
+	color:black;
+}
+.hs-pesterlog-action  > .hs-condescension-auto::after {
+	content:" [)(IC]";
+}
+.hs-children-lines > .hs-calliope-auto::before {
+	content:"UU: ";
+}
+.hs-pesterlog-action  > .hs-calliope-auto::before {
+	content:"uranianUmbra";
+	color:black;
+}
+.hs-pesterlog-action  > .hs-calliope-auto::after {
+	content:" [UU]";
+}
+.hs-children-lines > .hs-calborn-auto::before {
+	content:"uu: ";
+}
+.hs-pesterlog-action  > .hs-calborn-auto::before {
+	content:"undyingUmbrage";
+	color:black;
+}
+.hs-pesterlog-action  > .hs-calborn-auto::after {
+	content:" [uu]";
+}
+.hs-children-lines > .hs-caliborn-alt-auto::before {
+	content:"uu: ";
+}
+.hs-pesterlog-action  > .hs-caliborn-alt-auto::before {
+	content:"undyingUmbrage";
+	color:black;
+}
+.hs-pesterlog-action  > .hs-caliborn-alt-auto::after {
+	content:" [uu]";
+}
+.hs-children-lines > .hs-dad-auto::before {
+	content:"pipefan413: ";
+}
+.hs-pesterlog-action  > .hs-dad-auto::before {
+	content:"pipefan413";
+	color:black;
+}
+.hs-pesterlog-action  > .hs-dad-auto::after {
+	content:" [pipefan413]";
+}
