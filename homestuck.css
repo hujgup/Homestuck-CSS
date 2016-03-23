@@ -23,6 +23,8 @@
 	display:block;
 	margin-top:0;
 	margin-bottom:0;
+	padding-top:0;
+	padding-bottom:0;
 }
 .hs-pesterlog-action {
 	color:black;
@@ -555,7 +557,8 @@
 	border-color:#940015;
 }
 
-/* Character pesterlog auto-fills */.hs-children-lines > .hs-john-auto::before {
+/* Character pesterlog auto-fills */
+.hs-children-lines > .hs-john-auto::before {
 	content:"EB: ";
 }
 .hs-pesterlog-action  > .hs-john-auto::before {
@@ -834,4 +837,4 @@
 }
 .hs-pesterlog-action  > .hs-dad-auto::after {
 	content:" [pipefan413]";
-}
+}

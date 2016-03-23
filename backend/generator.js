@@ -75,6 +75,8 @@ res += ".hs-line, .hs-children-lines > * {\r\n";
 res += "\tdisplay:block;\r\n";
 res += "\tmargin-top:0;\r\n";
 res += "\tmargin-bottom:0;\r\n";
+res += "\tpadding-top:0;\r\n";
+res += "\tpadding-bottom:0;\r\n";
 res += "}\r\n";
 res += ".hs-pesterlog-action {\r\n";
 res += "\tcolor:black;\r\n";
@@ -153,7 +155,7 @@ res += generate("biscuits","#ff6000");
 res += generate("cans","#940015");
 res += "\r\n";
 
-res += "/* Character pesterlog auto-fills */";
+res += "/* Character pesterlog auto-fills */\r\n";
 res += psGenerate("john","ectoBiologist");
 res += psGenerate("john-old","ghostlyTrickster");
 res += psGenerate("rose","tentacleTherapist");
@@ -183,9 +185,7 @@ res += psGenerate("calborn","undyingUmbrage","uu");
 res += psGenerate("caliborn-alt","undyingUmbrage","uu");
 res += psGenerate("dad","pipefan413","pipefan413");
 
-window.addEventListener("DOMContentLoaded",function() {
-	console.log(res);
-	var textarea = document.createElement("textarea");
-	textarea.value = res;	
-	document.body.appendChild(textarea);
-});
+console.log(res);
+var textarea = document.createElement("textarea");
+textarea.value =  res;	
+document.body.appendChild(textarea);
